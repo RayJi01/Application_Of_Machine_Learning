@@ -13,7 +13,7 @@ The Details of Focus for each Homework & Projects:
 
 	--HW5: Intermediate Pandas dataframe manipulation, data selections, and data slicing, with intermediate subplot on datetime dataframe.
   
-  --Midterm: Contains one problem of basic python programming, one problem of intermediete pandas dataframe interpretation and plot, and one problem contains
+  	--Midterm: Contains one problem of basic python programming, one problem of intermediete pandas dataframe interpretation and plot, and one problem contains
              searborn side by side box plot.
   
-  --HW6: Intermediate Data Science operation and intepretation and application of scikit-learn regression model and residue. 
+  	--HW6: Intermediate Data Science operation and intepretation and application of scikit-learn regression model and residue. 
