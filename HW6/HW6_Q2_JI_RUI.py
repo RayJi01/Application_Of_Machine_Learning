@@ -14,6 +14,8 @@ commuteStLouis = pd.read_csv("CommuteStLouis.csv")
 # print the stats of a dataframe and create a hist for the dataframe:
 print(commuteStLouis.describe())
 commuteStLouis['Age'].hist()
+plt.title('Histogram of Age')
+
 
 # print the correlation of matrix
 print(commuteStLouis.corr())
