@@ -38,8 +38,11 @@ axis[1][1].set_ylabel('Total Volume')
 smoothed = avocado1['AveragePrice'].rolling(window=20).mean()
 smoothed2 = avocado1['Total Volume'].rolling(window=20).mean()
 fig, axis2 = plt.subplots(ncols=2, figsize=(15,10))
-axis2[0].plot(smoothed)
-axis2[1].plot(smoothed2)
+axis2[0].plot(smoothed, '-o', markersize=4)
+axis2[0].set_ylabel("Average Price")
+axis2[1].plot(smoothed2, '-o', markersize=4)
+axis2[1].set_ylabel("Total Volume")
+fig.suptitle("Avocado Price and Volume Time Series")
 
 plt.subplots_adjust(hspace=0.5)
 for ax in axis.flat:
