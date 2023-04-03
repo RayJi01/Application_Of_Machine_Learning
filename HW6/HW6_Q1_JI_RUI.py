@@ -15,6 +15,7 @@ print(avocado)
 # Plotting
 fig, axis = plt.subplots(nrows=2, ncols=2, figsize=(30, 30))
 avocado.sort_values(by='Date', ascending=True, inplace=True)
+fig.suptitle("Avocado Price and Volume Time Series")
 
 axis[0][0].scatter(avocado['Date'], avocado['AveragePrice'], s=10)
 axis[0][0].set_ylabel('AveragePrice')
