@@ -21,12 +21,14 @@ print(commuteStLouis.corr())
 
 # plot the scatter matrix
 pd.plotting.scatter_matrix(commuteStLouis, alpha=1, figsize=(10, 10), diagonal='hist')
+plt.show()
 # So the histogram is skew to the right, which means mean is always greater than median, which means the dataset tends
 # to show that the participants are mostly younger people, have smaller distance, and spend less time generally in
 # commuting.
 
 # plot side by side boxplot with gender
 sn.boxplot(x='Sex', y='Distance', data=commuteStLouis)
+plt.show()
 # Based on the side by side boxplot, the genders differences seems not present in commute distance.
 
 # impose a time and distance plot with regression value.
