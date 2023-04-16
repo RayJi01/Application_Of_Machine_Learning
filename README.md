@@ -17,3 +17,7 @@ The Details of Focus for each Homework & Projects:
              searborn side by side box plot.
   
   	--HW6: Intermediate Data Science operation and intepretation and application of scikit-learn regression model and residue. 
+	
+	--HW7: Application of machine learning using Linear Regression Model and Logistic Regression model to make decision. 
+	
+	--HW8: Application of MinMaxScaler() and K-means Clustering model to make decision. 
