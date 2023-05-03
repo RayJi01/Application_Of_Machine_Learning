@@ -10,7 +10,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 
-# 1. Import the dataset needed.
+# 1. Create a DataFrame “diabetes_knn” to store the diabetes data and set option
+# to display all columns without any restrictions on the number of columns displayed.
 raw_data = pd.read_csv('winequality(1).csv')
 print(raw_data.head())
 
@@ -41,7 +42,7 @@ for k in neighbors:
     trainA_Accuracy.append(metrics.accuracy_score(y_trainA, y_predA))
     trainB_Accuracy.append(metrics.accuracy_score(y_trainB, y_predB))
 
-# Which value of k produced the best accuracy in the train A and train B data sets? Generate predictions for the test
+# 6. Which value of k produced the best accuracy in the train A and train B data sets? Generate predictions for the test
 # partition with the chosen value of k. Print and plot the confusion matrix of the actual vs predicted wine quality.
 print(trainB_Accuracy)
 print(trainA_Accuracy)

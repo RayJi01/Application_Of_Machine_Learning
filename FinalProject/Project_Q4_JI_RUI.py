@@ -20,9 +20,9 @@ print(y)
 
 from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=2022, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=2023, stratify=y)
 
-Tree = DecisionTreeClassifier(max_depth=6, random_state=2022)
+Tree = DecisionTreeClassifier(max_depth=6, random_state=2023)
 Tree.fit(X_train, y_train)
 
 # 1. Print the confusion matrix. Also visualize the confusion matrix using ConfusionMatrixDisplay from sklearn.metrics
