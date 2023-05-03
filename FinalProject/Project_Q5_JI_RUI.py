@@ -75,3 +75,4 @@ print("The score of the model is ", model.score(X_train, y_train))
 sample = pd.DataFrame([[6, 140, 60, 12, 300, 24, 0.4, 45]])
 sampleScaled = pd.DataFrame(scaler.transform(sample), columns=X.columns)
 print("The predicted result would be: " + str(model.predict(sampleScaled)))
+

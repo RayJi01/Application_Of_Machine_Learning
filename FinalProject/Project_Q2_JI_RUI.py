@@ -31,7 +31,7 @@ for k in neighbours:
 plt.plot(neighbours, inertiaList, '.-')
 plt.show()
 
-# 4. The best k will be yield when K is 5.
+# 4. The best k will be yield when K is 6.
 
 # 5. What cluster does this store belong to?
 model = KMeans(n_clusters=6, random_state=2023)  # Use the best k means to regenerate the model.
