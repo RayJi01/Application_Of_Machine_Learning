@@ -21,8 +21,20 @@ print(diabetes_knn)
 print(diabetes_knn.shape)
 # So the dimension is a 769 * 9 dataframe.
 
-# 3. Update the DataFrame to account for missing values if needed.
-diabetes_knn.fillna(0, inplace=True)
+# 3. Update the DataFrame to account for missing values if needed, change them to the avg of the column they lies.
+diabetes_knn.loc[diabetes_knn['Glucose'] == 0, 'Glucose'] = \
+    diabetes_knn.loc[diabetes_knn['Glucose'] != 0, 'Glucose'].mean()
+
+diabetes_knn.loc[diabetes_knn['BloodPressure'] == 0, 'BloodPressure'] =\
+    diabetes_knn.loc[diabetes_knn['BloodPressure'] != 0, 'BloodPressure'].mean()
+
+diabetes_knn.loc[diabetes_knn['SkinThickness'] == 0, 'SkinThickness'] = \
+    diabetes_knn.loc[diabetes_knn['SkinThickness'] != 0, 'SkinThickness'].mean()
+
+diabetes_knn.loc[diabetes_knn['Insulin'] == 0, 'Insulin'] = \
+    diabetes_knn.loc[diabetes_knn['Insulin'] != 0, 'Insulin'].mean()
+
+diabetes_knn.loc[diabetes_knn['BMI'] == 0, 'BMI'] = diabetes_knn.loc[diabetes_knn['BMI'] != 0, 'BMI'].mean()
 
 # 4. Create the Feature Matrix and Target Vector
 X = diabetes_knn.iloc[:, 0:-1]
@@ -59,16 +71,16 @@ plt.plot(KRange, accuraciesB, label='TrainB')
 plt.legend()
 plt.show()
 
-# 9.
+# 9. We will Choose K=4 as the optimum value for our model.
 # Display the score of the model with best value of k. 
 # Also print and plot the confusion matrix for Train B, using Train A set as the reference set for training.
-k_opt = 7
+k_opt = 4
 model = KNeighborsClassifier(n_neighbors=k_opt)
 model.fit(X_train, y_train)
 y_pred_test = model.predict(X_test)
 metrics.ConfusionMatrixDisplay.from_predictions(y_test, y_pred_test)
 plt.show()
-print("The score of the model is ", model.score(X_train, y_train))
+print("The score of the model is ", model.score(X_test, y_test))
 
 # 10. Predict the Outcome for a person with pregnancies=6, glucose=140, blood pressure=60,
 # skin thickness=12, insulin=300, BMI=24, diabetes pedigree=0.4, age=45.

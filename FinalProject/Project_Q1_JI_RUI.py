@@ -53,10 +53,10 @@ plt.ylabel("Accuracy")
 plt.legend()
 plt.xticks(neighbors)
 plt.show()
-print('As the graph shows, the best value of K is 6 where the trainB accuracy is the highest.')
+print('As the graph shows, the best value of K is 27 where the trainB accuracy is the highest.')
 
 # Need to double-check with the exact answers.
-k_opt = 6
+k_opt = 27
 model = KNeighborsClassifier(n_neighbors=k_opt)
 model.fit(x_trainA, y_trainA)
 
